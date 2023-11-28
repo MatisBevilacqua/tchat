@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int      @id @default(autoincrement())
+  email          String   @unique
+  name           String
+  surname        String
+  gender         Int
+  salt           String
+  hashedPassword String
+  createdAt      DateTime @default(now())
+  admin          Boolean  @default(false)
+  country        String
+  city           String
+  state          String
+  origin         String
+  profilePicture String?
+
+  messages Message[]
+  channels Channel[]
+
+  groupChannel GroupChannel[]
+  groupAdmins  GroupChannel[] @relation("GroupAdmin")
+
+  joinRequests       JoinRequest[] @relation("UsersJoinRequest")
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  system    Boolean  @default(false)
+  content   String
+  audioFile String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author    User?    @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  Int?
+  channel   Channel  @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  channelId Int
+  invite    Int?
+}
+
+model Channel {
+  id        Int             @id @default(autoincrement())
+  messages  Message[]
+  users     User[]
+  private   PrivateChannel? @relation(fields: [privateId], references: [id], onDelete: Cascade)
+  privateId Int?
+  group     GroupChannel?   @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  groupId   Int?
+}
+
+model PrivateChannel {
+  id        Int       @id @default(autoincrement())
+  updatedAt DateTime  @updatedAt
+  createdAt DateTime  @default(now())
+  Channel   Channel[]
+}
+
+model GroupChannel {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  author      User      @relation(fields: [authorId], references: [id])
+  authorId    Int
+  Channel     Channel[]
+  // public = 0 & private = 1
+  visibility  Int       @default(0)
+  profilePicture String?
+
+  Admin       User[]        @relation("GroupAdmin")
+  JoinRequest JoinRequest[]
+}
+
+model JoinRequest {
+  id           Int          @id @default(autoincrement())
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  users        User[]       @relation(name: "UsersJoinRequest")
+  group        GroupChannel @relation(fields: [groupId], references: [id])
+  groupId      Int
+}

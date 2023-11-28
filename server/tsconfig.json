@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src", "src/events/schema.ts",
+  ],
+  "exclude": [
+    "dist"
+  ]
+}

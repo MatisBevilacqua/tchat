@@ -1,0 +1,132 @@
+{
+  "langSelect": {
+    "lang": "Français",
+    "hello": "Bonjour",
+    "sub": "Choissisez votre langue !",
+    "next": "Suivant"
+  },
+  "auth": {
+    "register": "S'enregistrer",
+    "login": "Se connecter",
+    "name": "Nom",
+    "surname": "Prénom",
+    "state": "Département ou état",
+    "city": "Ville",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer votre mot de passe",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "back": "Retour",
+    "error": {
+      "nameSurnameMin": "Le {} doit faire minimum 2 caractère",
+      "emailAlreadyExists": "Cette adresse email est déjà utilisée",
+      "emailInvalid": "L'adresse email est invalide",
+      "passwordMin": "Le mot de passe doit faire minimum 8 caractères",
+      "passwordNotMatch": "Les mots de passe ne correspondent pas",
+      "stateMin": "Le département ou l'état doit faire minimum 2 caractères",
+      "cityMin": "La ville doit faire minimum 2 caractères"
+    }
+  },
+  "dropdown": {
+    "search": "Rechercher",
+    "countryPlaceholder": "Pays de résidence",
+    "originCountryPlaceholder": "Pays d'origine",
+    "genderPlaceholder": "Genre",
+    "gender": [
+      "Homme",
+      "Femme",
+      "Autre"
+    ]
+  },
+  "tab": {
+    "chat": "Messages",
+    "settings": "Paramètres"
+  },
+  "route": {
+    "info": "Informations",
+    "edit": "Modifier le groupe",
+    "manageMember": "Gérer un membre",
+    "addMember": "Ajouter des membres",
+    "search": "Rechercher",
+    "createGroup": "Nouveau groupe",
+    "invite": "Invitation",
+    "chooseLanguage": "Choissisez votre langue"
+  },
+  "search": {
+    "search": "Rechercher",
+    "cancel": "Annuler",
+    "confirm": "Valider",
+    "hideList": "Cacher la liste",
+    "showList": "Voir la liste",
+    "createGroup": "Créer un groupe"
+  },
+  "groupLookup": {
+    "member": "membre",
+    "cancel": "Annuler",
+    "deleteConfirm": "Supprimer",
+    "addMembers": "Ajouter des membres",
+    "deleteGroupButton": "Supprimer le groupe",
+    "deleteGroupAlertTitle": "Supprimer le groupe",
+    "deleteGroupAlertMessage": "Êtes-vous sûr de vouloir supprimer ce groupe ?",
+    "invite": "Inviter",
+    "wheelButton": "Tourner la roue",
+    "quitGroup": "Quitter le groupe",
+    "quitAlert": {
+      "title": "Quitter le groupe",
+      "message": "Êtes-vous sûr de vouloir quitter ce groupe ?",
+      "quitConfirm": "Quitter"
+    },
+    "winnerPopup": {
+      "title": "Résultat",
+      "message": "Le gagnant est {} !"
+    },
+    "edit": {
+      "changeName": "Changer le nom",
+      "visibility": "Visibilité",
+      "public": "Publique",
+      "private": "Privé"
+    }
+  },
+  "memberLookup": {
+    "remove": "Retirer du groupe",
+    "sendMessage": "Envoyer un message",
+    "putAdmin": "Rendre administrateur",
+    "removeAdmin": "Retirer les droits d'admin",
+    "member": "Membre",
+    "admin": "Administrateur",
+    "author": "Propriétaire du groupe"
+  },
+  "addMember": {
+    "search": "Rechercher",
+    "next": "Suivant",
+    "confirm": "Valider"
+  },
+  "inviteConfirm": {
+    "send": "Envoyer",
+    "messagePlaceholder": "Envoyer une invitation"
+  },
+  "messageText": {
+    "joinInvite": "Rejoindre le groupe"
+  },
+  "channel": {
+    "alreadyInThisGroupAlertTitle": "Vous êtes déjà dans ce groupe",
+    "publicJoin": {
+      "title": "Rejoindre le groupe",
+      "message": "Etes-vous sûr de vouloir rejoindre le groupe {} ?",
+      "cancel": "Annuler",
+      "join": "Rejoindre"
+    },
+    "privateJoin": {
+      "title": "Envoyer une demande",
+      "message": "Etes-vous sûr de vouloir envoyer une demande pour rejoindre le groupe {} ?",
+      "cancel": "Annuler",
+      "send": "Envoyer"
+    }
+  },
+  "settings": {
+    "language": "Langue"
+  },
+  "channelList": {
+    "recentMessage": "Message récent"
+  }
+}
